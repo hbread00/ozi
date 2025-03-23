@@ -70,7 +70,7 @@ symbol = '─'
 
 [bun]
 format = '\([$symbol$version]($style)\)'
-symbol = ' '
+symbol = ' '
 version_format = '${raw}'
 
 [c]
