@@ -16,6 +16,7 @@ $fill\
 $bun\
 $c\
 $cmake\
+$cpp\
 $dart\
 $dotnet\
 $golang\
@@ -23,6 +24,7 @@ $gradle\
 $java\
 $kotlin\
 $lua\
+$maven\
 $nodejs\
 $package\
 $php\
@@ -47,7 +49,7 @@ error_symbol = '[>](bold red)'
 
 [cmd_duration]
 min_time = 0
-format = '\( [$duration]($style)\)'
+format = '\( [$duration]($style)\)'
 
 [username]
 show_always = true
@@ -55,7 +57,7 @@ format = '[$user]($style)'
 
 [hostname]
 format = '@[$hostname$ssh_symbol]($style)'
-ssh_symbol = ''
+ssh_symbol = ''
 
 [directory]
 format = '\[[$path]($style)[($read_only)]($read_only_style)\]'
@@ -63,10 +65,10 @@ read_only = '!'
 
 [git_branch]
 format = '\([$symbol$branch(:$remote_branch)]($style)\)'
-symbol = ' '
+symbol = ' '
 
 [fill]
-symbol = '─'
+symbol = '━'
 
 [bun]
 format = '\([$symbol$version]($style)\)'
@@ -75,17 +77,23 @@ version_format = '${raw}'
 
 [c]
 format = '\([$symbol($name:)$version]($style)\)'
-symbol = ' '
+symbol = ' '
 version_format = '${raw}'
 
 [cmake]
 format = '\([$symbol$version]($style)\)'
-symbol = ' '
+symbol = ' '
+version_format = '${raw}'
+
+[cpp]
+disabled = false
+format = '\([$symbol($name:)$version]($style)\)'
+symbol = ' '
 version_format = '${raw}'
 
 [dart]
 format = '\([$symbol$version]($style)\)'
-symbol = ' '
+symbol = ' '
 version_format = '${raw}'
 
 [dotnet]
@@ -95,32 +103,37 @@ version_format = '${raw}'
 
 [golang]
 format = '\([$symbol$version(<$mod_version)]($style)\)'
-symbol = ' '
+symbol = ' '
 version_format = '${raw}'
 
 [gradle]
 format = '\([$symbol$version]($style)\)'
-symbol = ' '
+symbol = ' '
 version_format = '${raw}'
 
 [java]
 format = '\([$symbol$version]($style)\)'
-symbol = ' '
+symbol = ' '
 version_format = '${raw}'
 
 [kotlin]
 format = '\([$symbol$version]($style)\)'
-symbol = ' '
+symbol = ' '
 version_format = '${raw}'
 
 [lua]
 format = '\([$symbol$version]($style)\)'
-symbol = ' '
+symbol = ' '
+version_format = '${raw}'
+
+[maven]
+format = '\([$symbol$version]($style)\)'
+symbol = ' '
 version_format = '${raw}'
 
 [nodejs]
 format = '\([$symbol$version]($style)\)'
-symbol = ' '
+symbol = ' '
 version_format = '${raw}'
 
 [package]
@@ -135,12 +148,12 @@ version_format = '${raw}'
 
 [python]
 format = '\([$symbol$pyenv_prefix$version(\($virtualenv\))]($style)\)'
-symbol = ' '
+symbol = ' '
 version_format = '${raw}'
 
 [rlang]
 format = '\([$symbol$version]($style)\)'
-symbol = ' '
+symbol = ' '
 version_format = '${raw}'
 
 [ruby]
@@ -150,12 +163,12 @@ version_format = '${raw}'
 
 [rust]
 format = '\([$symbol$version]($style)\)'
-symbol = ' '
+symbol = ' '
 version_format = '${raw}'
 
 [scala]
 format = '\([$symbol$version]($style)\)'
-symbol = ' '
+symbol = ' '
 version_format = '${raw}'
 
 [container]
@@ -167,71 +180,74 @@ disabled = false
 format = '\[[$symbol$type]($style)\]'
 
 [os.symbols]
-AIX = ' '
-Alpaquita = ' '
+AIX = ' '
+Alpaquita = ' '
 AlmaLinux = ' '
 Alpine = ' '
-ALTLinux = ' '
-Amazon = ' '
-Android = ' '
+ALTLinux = ' '
+Amazon = ' '
+Android = ' '
 AOSC = ' '
 Arch = ' '
 Artix = ' '
-Bluefin = ' '
-CachyOS = ' '
+Bazzite = ' '
+Bluefin = ' '
+CachyOS = ' '
 CentOS = ' '
 Debian = ' '
-DragonFly = ' '
 Elementary = ' '
-Emscripten = ' '
+DragonFly = ' '
+Emscripten = ' '
 EndeavourOS = ' '
 Fedora = ' '
 FreeBSD = ' '
 Garuda = ' '
 Gentoo = ' '
-HardenedBSD = ' '
+HardenedBSD = ' '
+Hurd = ' '
 Illumos = ' '
-Ios = ' '
-InstantOS = ' '
+Ios = ' '
+InstantOS = ' '
 Kali = ' '
+KDENeon = ' '
 Linux = ' '
-Mabox = ' '
-Macos = ' '
+Mabox = ' '
+Macos = ' '
 Manjaro = ' '
-Mariner = ' '
-MidnightBSD = ' '
+Mariner = ' '
+MidnightBSD = ' '
 Mint = ' '
-NetBSD = ' '
+NetBSD = ' '
 NixOS = ' '
 Nobara = ' '
 OpenBSD = ' '
-OpenCloudOS = ' '
-openEuler = ' '
+OpenCloudOS = ' '
+openEuler = ' '
 openSUSE = ' '
-OracleLinux = '󰌷 '
-PikaOS = ' '
+OracleLinux = ' '
+PikaOS = ' '
 Pop = ' '
 Raspbian = ' '
 Redhat = ' '
 RedHatEnterprise = ' '
 RockyLinux = ' '
-Redox = '󰀘 '
-Solus = '󰠳 '
+Redox = ' '
+Solus = ' '
 SUSE = ' '
 Ubuntu = ' '
-Ultramarine = ' '
-Unknown = ' '
+Ultramarine = ' '
+Unknown = ' '
 Uos = ' '
 Void = ' '
-Windows = ' '
+Windows = ' '
 Zorin = ' '
 
 [battery]
 format = '\[[$symbol$percentage]($style)\]'
 full_symbol = ' '
-charging_symbol = ' '
-discharging_symbol = ' '
-unknown_symbol = ' '
+charging_symbol = ' '
+discharging_symbol = ' '
+unknown_symbol = ' '
 empty_symbol = ' '
 
 [[battery.display]]

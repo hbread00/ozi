@@ -15,6 +15,7 @@ $fill\
 $bun\
 $c\
 $cmake\
+$cpp\
 $dart\
 $dotnet\
 $golang\
@@ -22,6 +23,7 @@ $gradle\
 $java\
 $kotlin\
 $lua\
+$maven\
 $nodejs\
 $package\
 $php\
@@ -81,6 +83,12 @@ format = '\([$symbol$version]($style)\)'
 symbol = 'cmk:'
 version_format = '${raw}'
 
+[cpp]
+disabled = false
+format = '\([$symbol($name:)$version]($style)\)'
+symbol = 'cpp:'
+version_format = '${raw}'
+
 [dart]
 format = '\([$symbol$version]($style)\)'
 symbol = 'dart:'
@@ -114,6 +122,11 @@ version_format = '${raw}'
 [lua]
 format = '\([$symbol$version]($style)\)'
 symbol = 'lua:'
+version_format = '${raw}'
+
+[maven]
+format = '\([$symbol$version]($style)\)'
+symbol = 'mvn:'
 version_format = '${raw}'
 
 [nodejs]

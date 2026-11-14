@@ -16,14 +16,16 @@ $fill\
 $bun\
 $c\
 $cmake\
+$cpp\
 $dart\
 $dotnet\
 $golang\
 $gradle\
 $java\
 $kotlin\
-$nodejs\
 $lua\
+$maven\
+$nodejs\
 $package\
 $php\
 $python\
@@ -83,6 +85,13 @@ format = '\([$symbol$version]($style)\)'
 symbol = ''
 version_format = '${raw}'
 
+[cpp]
+disabled = false
+format = '\([$symbol($name:)$version]($style)\)'
+# TODO: 图标待定
+symbol = '?'
+version_format = '${raw}'
+
 [dart]
 format = '\([$symbol$version]($style)\)'
 symbol = ''
@@ -116,6 +125,12 @@ version_format = '${raw}'
 [lua]
 format = '\([$symbol$version]($style)\)'
 symbol = ''
+version_format = '${raw}'
+
+[maven]
+format = '\([$symbol$version]($style)\)'
+# TODO: 图标待定
+symbol = '?'
 version_format = '${raw}'
 
 [nodejs]
@@ -167,63 +182,66 @@ disabled = false
 format = '\[[$symbol$type]($style)\]'
 
 [os.symbols]
-AIX = ''
-Alpaquita = ''
+AIX = ''
+Alpaquita = ''
 AlmaLinux = ''
 Alpine = ''
-ALTLinux = ''
-Amazon = ''
-Android = ''
+ALTLinux = ''
+Amazon = ''
+Android = ''
 AOSC = ''
 Arch = ''
 Artix = ''
-Bluefin = ''
-CachyOS = ''
+Bazzite = ''
+Bluefin = ''
+CachyOS = ''
 CentOS = ''
 Debian = ''
-DragonFly = ''
 Elementary = ''
-Emscripten = ''
+DragonFly = ''
+Emscripten = ''
 EndeavourOS = ''
 Fedora = ''
 FreeBSD = ''
 Garuda = ''
 Gentoo = ''
-HardenedBSD = ''
+HardenedBSD = ''
+Hurd = ''
 Illumos = ''
-Ios = ''
-InstantOS = ''
+Ios = ''
+InstantOS = ''
 Kali = ''
+KDENeon = ''
 Linux = ''
-Mabox = ''
-Macos = ''
+Mabox = ''
+Macos = ''
 Manjaro = ''
-Mariner = ''
-MidnightBSD = ''
+Mariner = ''
+MidnightBSD = ''
 Mint = ''
-NetBSD = ''
+NetBSD = ''
 NixOS = ''
 Nobara = ''
 OpenBSD = ''
-OpenCloudOS = ''
-openEuler = ''
+OpenCloudOS = ''
+openEuler = ''
 openSUSE = ''
-OracleLinux = '󰌷'
-PikaOS = ''
+OracleLinux = ''
+PikaOS = ''
 Pop = ''
 Raspbian = ''
 Redhat = ''
 RedHatEnterprise = ''
 RockyLinux = ''
-Redox = '󰀘'
-Solus = '󰠳'
+Redox = ''
+Solus = ''
 SUSE = ''
 Ubuntu = ''
-Ultramarine = ''
-Unknown = ''
+Ultramarine = ''
+Unknown = ''
 Uos = ''
 Void = ''
-Windows = ''
+Windows = ''
 Zorin = ''
 
 [battery]
