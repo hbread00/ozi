@@ -88,8 +88,7 @@ version_format = '${raw}'
 [cpp]
 disabled = false
 format = '\([$symbol($name:)$version]($style)\)'
-# TODO: 图标待定
-symbol = '?'
+symbol = ''
 version_format = '${raw}'
 
 [dart]
@@ -129,8 +128,7 @@ version_format = '${raw}'
 
 [maven]
 format = '\([$symbol$version]($style)\)'
-# TODO: 图标待定
-symbol = '?'
+symbol = ''
 version_format = '${raw}'
 
 [nodejs]
